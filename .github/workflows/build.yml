@@ -48,14 +48,6 @@ jobs:
       #- name: Test
       #  run: |
       #    npm run test --watch=false --browsers=ChromeHeadless
-      
-      - name: lint
-        run: |
-          ng lint
-      - name: Audit 
-        run: |
-          npm audit fix
-
       - name: Conventional Changelog Action
         id: changelog
         uses: TriPSs/conventional-changelog-action@v3
@@ -75,7 +67,3 @@ jobs:
       - name: Deploy
         run: |
           npm run deploy
-      - name: delete branch
-        run: |
-          git push bonus :githubcicd
-        
